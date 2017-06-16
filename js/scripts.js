@@ -65,6 +65,7 @@ function currency(number) {
   return "$"+number.toFixed(2).toString();
 }
 
+
 var newOrder = new Order;
 //var order = [];
 var pizzaNum = 0;
@@ -101,6 +102,11 @@ $(document).ready(function() {
     $("#order-cost").text(currency(newOrder.cost));
     //alert(newOrder.cost);
     pizzaNum++;
+  });
+
+  $("button#order-button").click(function(event) {
+    alert("Thank you for placing your order. Please pickup in 30 minutes");
+    location.reload();
   });
 
 });
