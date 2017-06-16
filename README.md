@@ -12,7 +12,9 @@ _Luigi's Pizza Parlor webpage allows users to place an order for carry-out. User
 
 |Behavior - Plain English|Input|Output|
 |---|---|---|
-|user selects pizza size, toppings, and clicks button to add to order|select large, pepperoni|before add to order button, user sees running total $12.50, after button, it appends pizza to his list order with the details|user selects a size, but no toppings|select medium|sees $10.00 before Add click|sees medium $10.00 after|user is ready to place order|user clicks Place Order button|receives an alert telling them to pickup order at address in 30 min|
+|user selects pizza size, toppings, and clicks button to add to order|select large, pepperoni|before add to order button, user sees running total $12.50, after button, it appends pizza to his list order with the details|
+|user selects a size, but no toppings|select medium|sees $10.00 before Add click sees medium $10.00 after|
+|user is ready to place order|user clicks Place Order button|receives an alert telling them to pickup order at address in 30 min|
 
 
 ## Setup/Installation Requirements
