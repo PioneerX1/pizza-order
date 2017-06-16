@@ -65,16 +65,21 @@ function currency(number) {
   return "$"+number.toFixed(2).toString();
 }
 
+function orderNumber() {
+  min = Math.ceil(1);
+  max = Math.floor(100);
+  var number = Math.floor(Math.random() * (max - min + 1)) + min;
+  return number;
+}
 
 var newOrder = new Order;
-//var order = [];
 var pizzaNum = 0;
 var newPizza;
 var charge;
+var orderNumber;
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
-  //$("form#pizza-form").submit(function(event) {
   $('.input').change('input', function() {
     //assign input values to variables
     var inputSize = $("input[name=size]:checked").val();
@@ -89,26 +94,25 @@ $(document).ready(function() {
     //alert('size: ' + inputSize + ' ' + cost);
     $("#show-cost").show();
     $("#pizza-cost").text(charge);
-    //button to add this pizza to overall order
 
   });
   $("button#add-pizza").click(function(event) {
     event.preventDefault();
     //order.push(newPizza);
     newOrder.addPizza(newPizza);
-    //alert(newOrder.pizzaList[pizzaNum].cost);
 
     $("ul#pizza-list").append("<li>" + newOrder.pizzaList[pizzaNum].size + " " + newOrder.pizzaList[pizzaNum].toppings + " " + currency(newOrder.pizzaList[pizzaNum].cost) + "</li>");
     $("#order-cost").text(currency(newOrder.cost));
     //alert(newOrder.cost);
     pizzaNum++;
+    $("#show-cost").show();
     $("#order-button").show();
   });
 
   $("button#order-button").click(function(event) {
     event.preventDefault();
-    alert("Thank you for placing your order. Please pickup at 123 Main Street, Seattle, WA in 30 minutes");
+    orderNumber = orderNumber();
+    alert("Thank you for placing your order. Please pickup at 123 Main Street, Seattle, WA in 30 minutes. Your order number is " + orderNumber);
     location.reload();
   });
-
 });

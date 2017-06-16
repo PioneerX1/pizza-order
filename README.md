@@ -1,37 +1,49 @@
-# _{Application Name}_
+# _Luigi's Pizza Parlor Online Ordering_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _Order Pizzas for Carry-Out from Luigi's, June 16, 2017_
 
-#### By _**{List of contributors}**_
+#### By _**Mick Sexton**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_Luigi's Pizza Parlor webpage allows users to place an order for carry-out. User picks a size and toppings for each pizza. They see a running tally of pizzas they choose to place orders for. When ready they submit their order._
+
+## Specifications
+
+|Behavior - Plain English|Input|Output|
+|---|---|---|
+|user selects pizza size, toppings, and clicks button to add to order|select large, pepperoni|before add to order button, user sees running total $12.50, after button, it appends pizza to his list order with the details|user selects a size, but no toppings|select medium|sees $10.00 before Add click|sees medium $10.00 after|user is ready to place order|user clicks Place Order button|receives an alert telling them to pickup order at address in 30 min|
+
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
+* _IF ON LOCAL MACHINE:_
+* _open the pizza-order folder, and open index.html_
+* _IF ONLINE:_
+* _Go To https://pioneerx1.github.io/pizza-order_
 * _format_
 
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are no known bugs at this time._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Please contact Mick Sexton at lacrookedbeat@hotmail.com if you have any questions, concerns, or feedback._
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+* _HTML_
+* _CSS_
+* _Javascript_
+* _J-Query_
+* _Bootstrap CSS_
+* _Atom_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*This software operates under the MIT license.*
 
-Copyright (c) 2017 **_{List of contributors or company name}_**
+Copyright (c) 2017 **_Mick Sexton_**
