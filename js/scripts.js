@@ -60,6 +60,10 @@ Pizza.prototype.calculatePizzaCost = function() {
   return this.cost;
 }
 
+function currency(number) {
+  return "$"+number.toFixed(2).toString();
+}
+
 //USER INTERFACE LOGIC
 $(document).ready(function() {
   //$("form#pizza-form").submit(function(event) {
@@ -75,11 +79,11 @@ $(document).ready(function() {
 
     //create new pizza object with these variables
     var newPizza = new Pizza(inputSize, inputToppings);
-    var cost = newPizza.calculatePizzaCost();
+    var charge = currency(newPizza.calculatePizzaCost());
     //alert('size: ' + inputSize + ' ' + cost);
     $("#show-cost").show();
 
-    $("#pizza-cost").text(cost);
+    $("#pizza-cost").text(charge);
     //button to add this pizza to overall order
   });
   /*
