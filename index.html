@@ -13,38 +13,60 @@
         <h1>Luigi's Pizza Place</h1>
         <h4>Go ahead, just order one already!</h4>
       </div>
-      <form id="pizza-form">
-        <p>Pick Your Size: </p>
-        <div class="radio">
-          <label>
-          <input type="radio" name="size" value="small">
-          Small
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-          <input type="radio" name="size" value="medium">
-          Medium
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-          <input type="radio" name="size" value="large">
-          Large
-          </label>
-        </div>
+      <div class="container">
+        <div class="row">
+          <form id="pizza-form">
+            <div class="col-xs-6">
+            <p>Pick Your Size: </p>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="small">
+              Small
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="medium">
+              Medium
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="large">
+              Large
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+              <input type="radio" name="size" value="extra large">
+              Extra Large
+              </label>
+            </div>
+            </div>
 
-        <div class="form-group">
-          <p>Select Your Toppings: </p>
-          <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
-          <input type="checkbox" name="toppings" value="green peppers">Green Peppers<br>
-          <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
-        </div>
+            <div class="col-xs-6">
+            <div class="form-group">
+              <p>Select Your Toppings: </p>
+              <input type="checkbox" name="toppings" value="pepperoni">Pepperoni<br>
+              <input type="checkbox" name="toppings" value="green peppers">Green Peppers<br>
+              <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br>
+              <input type="checkbox" name="toppings" value="olives">Olives<br>
+              <input type="checkbox" name="toppings" value="onions">Onions<br>
+              <input type="checkbox" name="toppings" value="bacon">Bacon<br>
+              <input type="checkbox" name="toppings" value="prosciutto">Prosciutto<br>
+              <input type="checkbox" name="toppings" value="spinach">Spinach<br>
+              <input type="checkbox" name="toppings" value="pineapple">Pineapple<br>
+              <input type="checkbox" name="toppings" value="sausage">Sausage<br>
+            </div>
+            </div>
 
-        <button type="submit" class="btn">Calculate Pizza Cost</button>
-      </form>
-      <div class="show-cost">
-        <h3>Your Pizza will be: $<span id="pizza-cost"></span></h3>
+            <button type="submit" class="btn">Calculate Pizza Cost</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="show-cost">
+        <h3>Your Pizza will be: $ <span id="pizza-cost"></span></h3>
       </div>
     </div>
   </body>
