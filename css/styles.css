@@ -1,3 +1,14 @@
 #show-cost {
-  
+
+}
+
+#order-button {
+  display: none;
+}
+
+body {
+  background: url(../img/pizza.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.9;
 }

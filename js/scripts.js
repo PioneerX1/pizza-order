@@ -102,10 +102,12 @@ $(document).ready(function() {
     $("#order-cost").text(currency(newOrder.cost));
     //alert(newOrder.cost);
     pizzaNum++;
+    $("#order-button").show();
   });
 
   $("button#order-button").click(function(event) {
-    alert("Thank you for placing your order. Please pickup in 30 minutes");
+    event.preventDefault();
+    alert("Thank you for placing your order. Please pickup at 123 Main Street, Seattle, WA in 30 minutes");
     location.reload();
   });
 
