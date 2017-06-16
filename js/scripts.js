@@ -35,4 +35,4 @@ Pizza.prototype.calculateCost = function() {
 
 var newPizza = new Pizza("medium", ["mushrooms", "pepperoni", "green peppers"]);
 var cost = newPizza.calculateCost();
-alert(cost);
+//alert(cost);
