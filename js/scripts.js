@@ -1,11 +1,19 @@
 //BUSINESS LOGIC
 
+function Order(pizza) {
+  this.pizza = pizza;
+}
+
 function Pizza(size, toppings) {
 	this.size = size;
   this.toppings = toppings;
 }
 
-Pizza.prototype.calculateCost = function() {
+Order.prototype.calculateOrderCost = function() {
+
+}
+
+Pizza.prototype.calculatePizzaCost = function() {
 	//baseline cost for small with no toppings
 	this.cost = 8.50;
 	//upcharges for sizes beyond small
@@ -54,7 +62,8 @@ Pizza.prototype.calculateCost = function() {
 
 //USER INTERFACE LOGIC
 $(document).ready(function() {
-  $("form#pizza-form").submit(function(event) {
+  //$("form#pizza-form").submit(function(event) {
+  $('.input').change('input', function() {
     event.preventDefault();
 
     //assign input values to variables
@@ -66,10 +75,19 @@ $(document).ready(function() {
 
     //create new pizza object with these variables
     var newPizza = new Pizza(inputSize, inputToppings);
-    var cost = newPizza.calculateCost();
+    var cost = newPizza.calculatePizzaCost();
     //alert('size: ' + inputSize + ' ' + cost);
     $("#show-cost").show();
 
     $("#pizza-cost").text(cost);
+    //button to add this pizza to overall order
   });
+  /*
+  $("form#order-form").submit(function(event) {
+    event.preventDefault();
+
+    var newOrder = new Order(newPizza);
+
+  });
+  */
 });
