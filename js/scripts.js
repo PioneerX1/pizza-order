@@ -30,9 +30,20 @@ Pizza.prototype.calculateCost = function() {
 }
 
 //USER INTERFACE LOGIC
+$(document).ready(function() {
+  $("form#pizza-form").submit(function(event) {
+    event.preventDefault();
 
+    //assign input values to variables
+    var inputSize = $("input[name=size]:checked").val();
+    var inputToppings = [];
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      inputToppings.push($(this).val());
+    });
 
-
-var newPizza = new Pizza("medium", ["mushrooms", "pepperoni", "green peppers"]);
-var cost = newPizza.calculateCost();
-//alert(cost);
+    //create new pizza object with these variables
+    var newPizza = new Pizza(inputSize, inputToppings);
+    var cost = newPizza.calculateCost();
+    alert('size: ' + inputSize + ' ' + cost);
+  });
+});
