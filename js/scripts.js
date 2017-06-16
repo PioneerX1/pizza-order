@@ -57,6 +57,7 @@ function currency(number) {
 }
 
 var order = [];
+var pizzaNum = 0;
 var newPizza;
 var charge;
 
@@ -82,10 +83,9 @@ $(document).ready(function() {
   });
   $("button#add-pizza").click(function(event) {
     event.preventDefault();
-    //var newOrder = new Order(newPizza);
-    //alert('pizza added');
     order.push(newPizza);
-    $("ul#pizza-list").append("<li>" + newPizza.size + " " + newPizza.toppings + " " + newPizza.cost + "</li>");
+    $("ul#pizza-list").append("<li>" + order[pizzaNum].size + " " + order[pizzaNum].toppings + " " + currency(order[pizzaNum].cost) + "</li>");
+    pizzaNum++;
   });
 
 });
