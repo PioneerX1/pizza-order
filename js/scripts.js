@@ -1,8 +1,17 @@
 //BUSINESS LOGIC
+function Order() {
+  this.cost = 0;
+  this.pizzaList = [];
+}
 
 function Pizza(size, toppings) {
 	this.size = size;
   this.toppings = toppings;
+}
+
+Order.prototype.addPizza = function(newPizza) {
+  this.cost += newPizza.cost;
+  this.pizzaList.push(newPizza);
 }
 
 Pizza.prototype.calculatePizzaCost = function() {
@@ -56,7 +65,8 @@ function currency(number) {
   return "$"+number.toFixed(2).toString();
 }
 
-var order = [];
+var newOrder = new Order;
+//var order = [];
 var pizzaNum = 0;
 var newPizza;
 var charge;
@@ -83,8 +93,13 @@ $(document).ready(function() {
   });
   $("button#add-pizza").click(function(event) {
     event.preventDefault();
-    order.push(newPizza);
-    $("ul#pizza-list").append("<li>" + order[pizzaNum].size + " " + order[pizzaNum].toppings + " " + currency(order[pizzaNum].cost) + "</li>");
+    //order.push(newPizza);
+    newOrder.addPizza(newPizza);
+    //alert(newOrder.pizzaList[pizzaNum].cost);
+
+    $("ul#pizza-list").append("<li>" + newOrder.pizzaList[pizzaNum].size + " " + newOrder.pizzaList[pizzaNum].toppings + " " + currency(newOrder.pizzaList[pizzaNum].cost) + "</li>");
+    $("#order-cost").text(currency(newOrder.cost));
+    //alert(newOrder.cost);
     pizzaNum++;
   });
 
